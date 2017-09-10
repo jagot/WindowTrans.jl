@@ -24,7 +24,7 @@ $$
 Here, we use a version with variable width.
 =#
 
-gabor(t, x, σ) = wind_transf(t, x, fftshift(exp(-(t-mean(t)).^2/2σ^2)))
+gabor(t, x, σ) = wind_transf(t, x, fftshift(exp.(-(t-mean(t)).^2/2σ^2)))
 
 #=
 The Wigner distribution function (WDF) is defined as [[1]]
